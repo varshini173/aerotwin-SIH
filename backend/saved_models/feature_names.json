@@ -1,0 +1,16 @@
+[
+  "rpm",
+  "temperature",
+  "vibration",
+  "pressure",
+  "load",
+  "temp_ma",
+  "vib_ma",
+  "temp_roc",
+  "vib_roc",
+  "rpm_std",
+  "pressure_deviation",
+  "temp_deviation",
+  "vib_deviation",
+  "combined_degradation_index"
+]

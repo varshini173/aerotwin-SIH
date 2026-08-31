@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Backend: Run Server",
+      "type": "shell",
+      "command": "${workspaceFolder}/backend/venv/Scripts/python -m uvicorn main:app --reload",
+      "windows": {
+        "command": "${workspaceFolder}\\backend\\venv\\Scripts\\python.exe -m uvicorn main:app --reload"
+      },
+      "linux": {
+        "command": "${workspaceFolder}/backend/venv/bin/python -m uvicorn main:app --reload"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/backend/venv/bin/python -m uvicorn main:app --reload"
+      },
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "panel": "dedicated", "group": "aerotwin" }
+    },
+    {
+      "label": "Frontend: Run Dev Server",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "panel": "dedicated", "group": "aerotwin" }
+    },
+    {
+      "label": "AeroTwin: Start Full Stack",
+      "dependsOn": ["Backend: Run Server", "Frontend: Run Dev Server"],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}

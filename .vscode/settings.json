@@ -1,0 +1,38 @@
+{
+  // Lets Pylance resolve "from digital_twin.twin_state import ..." style
+  // imports in backend/main.py — those modules only exist relative to
+  // backend/, but VS Code opens this folder ("this/") as the workspace
+  // root, so without this Pylance flags every one of them as an
+  // unresolved import.
+  "python.analysis.extraPaths": ["./backend"],
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.typeCheckingMode": "basic",
+
+  // After running setup.sh / setup.bat once, use
+  // "Python: Select Interpreter" (Ctrl+Shift+P) and pick
+  // ./backend/venv — VS Code will auto-detect it once it exists.
+  "python.terminal.activateEnvironment": true,
+
+  // Keep noisy/irrelevant folders out of search and the file explorer.
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "search.exclude": {
+    "**/backend/venv": true,
+    "**/frontend/node_modules": true,
+    "**/frontend/dist": true,
+    "**/__pycache__": true
+  },
+  "files.watcherExclude": {
+    "**/backend/venv/**": true,
+    "**/frontend/node_modules/**": true
+  },
+
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[javascript][javascriptreact]": {
+    "editor.tabSize": 2
+  }
+}

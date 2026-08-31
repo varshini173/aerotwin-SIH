@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #10131a;
+  color: #e1e2eb;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(44, 49, 57, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+}
+
+.glow-active {
+  box-shadow: 0 0 8px rgba(0, 219, 233, 0.5);
+}
+.glow-critical {
+  box-shadow: 0 0 12px rgba(255, 180, 171, 0.6);
+  border-color: #ffb4ab;
+}
+.glow-warning {
+  box-shadow: 0 0 12px rgba(255, 185, 95, 0.6);
+  border-color: #ffb95f;
+}
+
+.twin-part {
+  transition: fill 0.3s ease, filter 0.3s ease;
+}
+.status-normal {
+  fill: #4edea3;
+  filter: drop-shadow(0 0 4px #4edea3);
+}
+.status-warning {
+  fill: #ffb95f;
+  filter: drop-shadow(0 0 6px #ffb95f);
+}
+.status-critical {
+  fill: #ffb4ab;
+  filter: drop-shadow(0 0 8px #ffb4ab);
+}
+
+.engineering-grid {
+  background-image: linear-gradient(rgba(59, 73, 75, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 73, 75, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #191c22;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b494b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #849495;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}

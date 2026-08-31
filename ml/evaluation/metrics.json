@@ -1,0 +1,93 @@
+{
+  "anomaly_detection": {
+    "accuracy": 0.9657482993197279,
+    "precision": 0.9600476096012696,
+    "recall": 1.0,
+    "f1": 0.9796166224723195
+  },
+  "fault_classification": {
+    "accuracy": 0.9960544217687075,
+    "precision_macro": 0.9960858559213884,
+    "recall_macro": 0.9960544217687074,
+    "f1_macro": 0.9960602517484357,
+    "classes": [
+      "COMBINED_DEGRADATION",
+      "NONE",
+      "OVERHEAT",
+      "PRESSURE_ABNORMALITY",
+      "PROGRESSIVE_DEGRADATION",
+      "RPM_INSTABILITY",
+      "VIBRATION"
+    ],
+    "confusion_matrix": [
+      [
+        1047,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1049,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1044,
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        4,
+        0,
+        1044,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        0,
+        1045,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        1046,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        3,
+        0,
+        0,
+        1046
+      ]
+    ]
+  },
+  "rul_regression": {
+    "mae_hours": 0.06114007036607722,
+    "rmse_hours": 0.507511665262342,
+    "r2": 0.9850559213399114
+  }
+}
