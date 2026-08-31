@@ -94,5 +94,5 @@ export const api = {
 }
 
 export const WS_URL =
-  (import.meta.env.VITE_WS_BASE || 'ws://127.0.0.1:8000') +
+  'wss://aerotwin-sih-2u55.onrender.com' +
   '/ws/engine'
